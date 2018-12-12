@@ -172,6 +172,14 @@ def problem3a(r, s):
     #    **  use (call) the   sum_of_digits   function
     #    **  that is DEFINED ABOVE.
     ###########################################################################
+    total = 0
+    for k in range(s + 1 - r):
+        if sum_of_digits(((k + r)**3) % 2) == 1:
+            total = total + (k + r)
+    return total
+
+
+
 
 
 def run_test_problem3b():
@@ -283,6 +291,13 @@ def problem3b(m, r):
     # TODO: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
+
+    total = 0
+    for k in range(m):
+      total = total + ((k+1)/((r + k)**(k + 1)))
+
+    return total
+
 
 
 ###############################################################################
