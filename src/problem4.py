@@ -44,6 +44,8 @@ def run_test_problem4():
 
 
 def problem4(number_of_stairs, step_size, starting_point, window):
+    
+
     """
     See   problem4_picture.pdf   in this project for pictures
     that may help you better understand the following specification:

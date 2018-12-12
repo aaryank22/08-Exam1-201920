@@ -65,7 +65,7 @@ def run_test_problem1():
 
 def problem1(square, thickness, window):
 
-    window = rg.RoseWindow
+
 
     """
     See   problem1_picture.pdf   in this project for pictures
@@ -107,6 +107,31 @@ def problem1(square, thickness, window):
     # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+
+    square.attach_to(window)
+    x = square.center.x
+    y = square.center.y + square.length_of_each_side
+    x1 = square.center. x - square.length_of_each_side / 2
+    y1 = square.center.y
+    circle = rg.Circle(rg.Point(x, y), square.length_of_each_side / 2)
+    circle.fill_color = square.fill_color
+    circle.outline_thickness = thickness
+    circle.attach_to(window)
+    line = rg.Line(rg.Point(x, y), rg.Point(x1, y1))
+    line.color = square.outline_color
+    line.thickness = thickness
+    line.attach_to(window)
+    window.render()
+
+
+
+
+
+
+
+
+
+
 
 
 
