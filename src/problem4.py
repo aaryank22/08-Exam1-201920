@@ -44,7 +44,30 @@ def run_test_problem4():
 
 
 def problem4(number_of_stairs, step_size, starting_point, window):
-    
+    starting_point.attach_to(window)
+    x = starting_point.x
+    y = starting_point.y
+
+
+    for k in range(number_of_stairs):
+        y1 = starting_point.y - (step_size * number_of_stairs)
+        x1 = starting_point.x + (step_size * number_of_stairs)
+        line = rg.Line(rg.Point(x, y), rg.Point(x1, y1))
+        line.color = 'black'
+        line.color = 'magenta'
+        line.attach_to(window)
+
+    window.render()
+
+
+
+
+
+
+
+
+
+
 
     """
     See   problem4_picture.pdf   in this project for pictures
